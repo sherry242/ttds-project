@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello world</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='findStyle.css') }}">
+
+</head>
+<body>
+
+
+<div class="cntr">
+	<div class="cntr-innr">
+        <h1>FINDMUSIC</h1>
+        <form method="post">
+	       <label class="search" for="inpt_search">
+			<input name="search" id="search" type="text" />
+           </label>
+           <label class="radiolist">
+               <input type="radio" name="search_method" id="radio1" value="keyword">keyword
+               <input type="radio" name="search_method" id="radio2" value="song">song
+           </label>
+
+        </form>
+
+
+	</div>
+</div>
+
+
+</body>
+</html>
