@@ -1,0 +1,55 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello world</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='findStyle.css') }}">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css" />
+    <script type="text/javascript" src="../stylesheets/bootstrap.min.js"></script>
+    <script src="../static/layui.js"></script>
+    <link rel="stylesheet" href="../static/css/layui.css">
+
+</head>
+<body>
+
+
+<div class="cntr">
+	<div class="cntr-innr">
+        <form method="post">
+            <label class="title">FINDMUSIC</label>
+	       <label class="search" for="inpt_search">
+			<input name="search" id="search" type="text" />
+           </label>
+           <label class="radiolist">
+               <input type="radio" name="search_method" id="radio1" value="keyword">keyword
+               <input type="radio" name="search_method" id="radio2" value="song">song
+           </label>
+
+        </form>
+
+
+	</div>
+</div>
+
+
+<div class="middle">
+{#    <label>result number:100</label>#}
+    <table class="table table-hover">
+	     {% for i,v in num.items() %}
+		  <tr>
+			<td>songname:{{v}}</td>
+            <td>singer:{{v}}</td>
+            <td>album:{{v}}</td>
+            <td>date:{{v}}</td>
+		  </tr>
+
+	     {% endfor %}
+</table>
+</div>
+
+
+
+
+
+</body>
+</html>
